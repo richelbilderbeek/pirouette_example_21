@@ -1,3 +1,7 @@
+# From https://github.com/richelbilderbeek/pirouette_article/issues/56:
+#
+# Write script that shows the true and twin error for hundreds of trees with
+# 10, 1k, 2k, ..., 10k nucleotides
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
 
@@ -10,6 +14,7 @@ setwd(example_folder)
 set.seed(rng_seed)
 testit::assert(is_beast2_installed())
 phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
+ape::plot.phylo(phylogeny)
 
 alignment_params <- create_alignment_params(
   sim_tral_fun = get_sim_tral_with_std_nsm_fun(
