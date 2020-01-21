@@ -12,3 +12,17 @@ that shows the true and twin error for 10, 1k, 2k, ..., 10k nucleotides.
 
 ![](example_21_314/errors.png)
 
+![](example_21_315/errors.png)
+
+![](example_21_316/errors.png)
+
+![](example_21_317/errors.png)
+
+![](example_21_318/errors.png)
+
+![](example_21_319/errors.png)
+
+![](example_21_320/errors.png)
+
+![](example_21_321/errors.png)
+
