@@ -15,7 +15,7 @@ seed_to_sequence_length <- function(rng_seed) {
   sequence_length
 }
 testthat::expect_equal(seed_to_sequence_length(314), 100)
-testthat::expect_equal(seed_to_sequence_length(315), 250)
+testthat::expect_equal(seed_to_sequence_length(315), 248)
 testthat::expect_equal(seed_to_sequence_length(316), 500)
 testthat::expect_equal(seed_to_sequence_length(317), 1000)
 testthat::expect_equal(seed_to_sequence_length(318), 2000)
