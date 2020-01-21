@@ -9,7 +9,7 @@ root_folder <- getwd()
 example_no <- 21
 
 seed_to_sequence_length <- function(rng_seed) {
-  sequence_lengths <- c(100, 250, 500, 1000, 2000, 4000, 8000, 16000)
+  sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
   sequence_length <- sequence_lengths[rng_seed + 1 - 314]
   if (is.na(sequence_length)) stop("Invalid seed")
   sequence_length
