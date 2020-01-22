@@ -69,7 +69,8 @@ for (rng_seed in seq(314, 321)) {
 
   pir_params <- create_pir_params(
     alignment_params = alignment_params,
-    experiments = experiments
+    experiments = experiments,
+    twinning_params = create_twinning_params()
   )
 
   rm_pir_param_files(pir_params)
