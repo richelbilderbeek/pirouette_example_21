@@ -3,7 +3,6 @@
 # Write script that shows the true and twin error for hundreds of trees with
 # 10, 1k, 2k, ..., 10k nucleotides
 suppressMessages(library(pirouette))
-suppressMessages(library(ggplot2))
 
 ################################################################################
 # Constants
@@ -57,6 +56,7 @@ for (rng_seed in seq(314, 321)) {
 
   pir_save(
     phylogeny = phylogeny,
+    pir_params = pir_params,
     pir_out = pir_out,
     folder_name = folder_name
   )
