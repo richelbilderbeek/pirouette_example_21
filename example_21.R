@@ -4,14 +4,10 @@
 # 10, 1k, 2k, ..., 10k nucleotides
 suppressMessages(library(pirouette))
 
-################################################################################
 # Constants
-################################################################################
 is_testing <- is_on_travis()
-
 root_folder <- getwd()
 example_no <- 21
-
 seed_to_sequence_length <- function(rng_seed) {
   sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
   sequence_length <- sequence_lengths[rng_seed + 1 - 314]
@@ -27,16 +23,13 @@ testthat::expect_equal(seed_to_sequence_length(319), 4000)
 testthat::expect_equal(seed_to_sequence_length(320), 8000)
 testthat::expect_equal(seed_to_sequence_length(321), 16000)
 testthat::expect_error(seed_to_sequence_length(322))
-
 for (rng_seed in seq(314, 321)) {
   folder_name <- file.path(paste0("example_", example_no, "_", rng_seed))
-
   ##############################################################################
   # Create phylogeny
   ##############################################################################
   set.seed(rng_seed)
   phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
-
   ##############################################################################
   # Setup pirouette
   ##############################################################################
@@ -44,16 +37,13 @@ for (rng_seed in seq(314, 321)) {
     folder_name = folder_name,
     sequence_length = seed_to_sequence_length(rng_seed)
   )
-
   if (is_testing) {
     pir_params <- shorten_pir_params(pir_params)
   }
-
   pir_out <- pir_run(
     phylogeny = phylogeny,
     pir_params = pir_params
   )
-
   pir_save(
     phylogeny = phylogeny,
     pir_params = pir_params,
