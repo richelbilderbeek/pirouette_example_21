@@ -3,6 +3,9 @@
 # Write script that shows the true and twin error for hundreds of trees with
 # 10, 1k, 2k, ..., 10k nucleotides
 library(pirouette)
+library(beautier)
+library(beastier)
+library(testthat)
 
 # Constants
 example_no <- 21
