@@ -2,8 +2,8 @@
 
 Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)                                                                                                 |[![AppVeyor logo](pics/AppVeyor.png)](https://appveyor.com)                                                                                               
 ---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/pirouette_example_21.svg?branch=master)](https://travis-ci.org/richelbilderbeek/pirouette_example_21) |?
-`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/pirouette_example_21.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/pirouette_example_21)|?
+`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/pirouette_example_21.svg?branch=master)](https://travis-ci.org/richelbilderbeek/pirouette_example_21) |[![Build status](https://ci.appveyor.com/api/projects/status/0xdv3uatquca9wce/branch/master?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/pirouette-example-21/branch/master)
+`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/pirouette_example_21.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/pirouette_example_21)|[![Build status](https://ci.appveyor.com/api/projects/status/0xdv3uatquca9wce/branch/develop?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/pirouette-example-21/branch/develop)
 
 A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples)
 that shows the true and twin error for 10, 1k, 2k, ..., 10k nucleotides.
