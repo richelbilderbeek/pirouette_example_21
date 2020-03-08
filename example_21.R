@@ -13,7 +13,7 @@ rng_seed <- 314
 crown_age <- 10
 sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
 n_phylogenies_per_sequence_length <- 5
-is_testing <- is_on_travis()
+is_testing <- is_on_ci()
 if (is_testing) {
   sequence_lengths <- c(100, 248)
   n_phylogenies_per_sequence_length <- 2
