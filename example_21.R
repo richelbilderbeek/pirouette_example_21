@@ -6,6 +6,7 @@ library(pirouette)
 library(beautier)
 library(beastier)
 library(testthat)
+library(ggplot2)
 
 # Constants
 example_no <- 21
@@ -55,6 +56,22 @@ pir_outs <- pir_runs(
   phylogenies = phylogenies,
   pir_paramses = pir_paramses
 )
+
+# Save
+n_replicates <- n_phylogenies_per_sequence_length
+for (i in seq_along(sequence_lengths)) {
+  sequence_length <- sequence_lengths[i]
+  from_index <- ((i - 1) * n_replicates) + 1
+  to_index <- ((i - 1) * n_replicates) + n_replicates
+  pir_plots(
+    pir_outs = pir_outs[from_index:to_index]
+  ) + ggtitle(paste("Sequence length:", sequence_length)) +
+    ggsave(
+      filename = paste0("errors_", sequence_length, ".png"),
+      width = 7,
+      height = 7
+    )
+}
 
 # Save
 expect_equal(length(pir_paramses), length(pir_outs))
