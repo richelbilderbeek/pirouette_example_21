@@ -1,0 +1,50 @@
+Loading required package: beautier
+Loading required package: babette
+Loading required package: beastier
+Loading required package: mauricer
+Loading required package: tracerer
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Error: length(pir_paramses) not equal to length(phylogenies).
+1/1 mismatches
+[1] 40 - 25 == 15
+Execution halted
+
+
+###############################################################################
+Peregrine Cluster
+Job 10130150 for user 'p230198'
+Finished at: Mon Mar 16 14:09:07 CET 2020
+
+Job details:
+============
+
+Name                : rerun.sh
+User                : p230198
+Partition           : regular
+Nodes               : pg-node139
+Cores               : 1
+State               : FAILED
+Submit              : 2020-03-16T13:58:42
+Start               : 2020-03-16T13:59:31
+End                 : 2020-03-16T14:09:07
+Reserved walltime   : 00:30:00
+Used walltime       : 00:09:36
+Used CPU time       : 00:09:17 (efficiency: 96.84%)
+% User (Computation): 99.74%
+% System (I/O)      :  0.26%
+Mem reserved        : 2000M/core
+Max Mem used        : 221.27M (pg-node139)
+Max Disk Write      : 0.00  (pg-node139)
+Max Disk Read       : 51.20K (pg-node139)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
