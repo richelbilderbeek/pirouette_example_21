@@ -19,7 +19,7 @@ n_phylogenies_per_sequence_length <- 5
 is_testing <- is_on_ci()
 if (is_testing) {
   sequence_lengths <- c(100, 248)
-  n_phylogenies_per_sequence_length <- 2
+  n_phylogenies_per_sequence_length <- 3
 }
 n_sequence_lengths <- length(sequence_lengths)
 n_pir_params <- n_sequence_lengths * n_phylogenies_per_sequence_length
@@ -32,7 +32,7 @@ for (i in seq_len(n_phylogenies_per_sequence_length)) {
   phylogenies[[i]] <- phylogeny
 }
 # 1 2 3 1 2 3
-phylogenies <- rep(phylogenies, n_phylogenies_per_sequence_length)
+phylogenies <- rep(phylogenies, each = n_sequence_lengths)
 
 # Create pirouette parameter sets
 expect_equal(n_pir_params, length(phylogenies))
