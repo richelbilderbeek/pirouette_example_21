@@ -12,6 +12,8 @@ library(ggplot2)
 example_no <- 21
 rng_seed <- 314
 crown_age <- 10
+folder_name <- paste0("example_", example_no)
+
 sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
 n_phylogenies_per_sequence_length <- 5
 is_testing <- is_on_ci()
@@ -33,7 +35,11 @@ for (i in seq_len(n_phylogenies_per_sequence_length)) {
 phylogenies <- rep(phylogenies, n_phylogenies_per_sequence_length)
 
 # Create pirouette parameter sets
-pir_paramses <- create_std_pir_paramses(n = n_pir_params)
+expect_equal(n_pir_params, length(phylogenies))
+pir_paramses <- create_std_pir_paramses(
+  n = n_pir_params,
+  folder_name = folder_name
+)
 expect_equal(length(pir_paramses), length(phylogenies))
 if (is_testing) {
   pir_paramses <- shorten_pir_paramses(pir_paramses)
@@ -57,8 +63,13 @@ pir_outs <- pir_runs(
   pir_paramses = pir_paramses
 )
 
-# Save
+# Save summary
 n_replicates <- n_phylogenies_per_sequence_length
+pir_plots(pir_outs) +
+  ggtitle(paste("Number of replicates: ", n_replicates)) +
+  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+
+# Save individual runs
 for (i in seq_along(sequence_lengths)) {
   sequence_length <- sequence_lengths[i]
   from_index <- ((i - 1) * n_replicates) + 1
