@@ -58,9 +58,10 @@ for (i in seq_along(sequence_lengthses)) {
 }
 
 # Do the runs
+# DIRTY HACK: ONLY DO THE LAST 6
 pir_outs <- pir_runs(
-  phylogenies = phylogenies,
-  pir_paramses = pir_paramses
+  phylogenies = phylogenies[34:40],
+  pir_paramses = pir_paramses[34:40]
 )
 
 # Save summary
