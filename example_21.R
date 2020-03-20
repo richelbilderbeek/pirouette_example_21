@@ -15,7 +15,7 @@ crown_age <- 10
 folder_name <- paste0("example_", example_no)
 
 sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
-n_phylogenies_per_sequence_length <- 5
+n_phylogenies_per_sequence_length <- 2
 is_testing <- is_on_ci()
 if (is_testing) {
   sequence_lengths <- c(100, 248)
