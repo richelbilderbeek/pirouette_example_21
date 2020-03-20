@@ -3,20 +3,24 @@ Loading required package: babette
 Loading required package: beastier
 Loading required package: mauricer
 Loading required package: tracerer
-Error: `n_pir_params` not equal to length(phylogenies).
-1/1 mismatches
-[1] 40 - 25 == 15
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Error in pirouette::check_pir_out_names(pir_out) : 
+  'tree' must be an element of an 'pir_out'.
+Tip: use 'create_pir_out'
+Calls: pir_plots -> check_pir_out -> <Anonymous>
 Execution halted
 
-real	0m6.357s
-user	0m1.232s
-sys	0m0.359s
+real	705m8.080s
+user	676m26.800s
+sys	8m7.805s
 
 
 ###############################################################################
 Peregrine Cluster
-Job 10154295 for user 'p230198'
-Finished at: Tue Mar 17 10:11:24 CET 2020
+Job 10198366 for user 'p230198'
+Finished at: Thu Mar 19 21:34:04 CET 2020
 
 Job details:
 ============
@@ -24,21 +28,21 @@ Job details:
 Name                : pirex21
 User                : p230198
 Partition           : regular
-Nodes               : pg-node011
+Nodes               : pg-node075
 Cores               : 1
 State               : FAILED
-Submit              : 2020-03-17T10:11:15
-Start               : 2020-03-17T10:11:16
-End                 : 2020-03-17T10:11:23
+Submit              : 2020-03-19T09:48:54
+Start               : 2020-03-19T09:48:55
+End                 : 2020-03-19T21:34:04
 Reserved walltime   : 1-00:00:00
-Used walltime       :   00:00:07
-Used CPU time       :   00:00:02 (efficiency: 31.47%)
-% User (Computation): 75.76%
-% System (I/O)      : 24.24%
+Used walltime       :   11:45:09
+Used CPU time       :   11:24:35 (efficiency: 97.08%)
+% User (Computation): 98.81%
+% System (I/O)      :  1.19%
 Mem reserved        : 10G/node
-Max Mem used        : 0.00  (pg-node011)
-Max Disk Write      : 0.00  (pg-node011)
-Max Disk Read       : 0.00  (pg-node011)
+Max Mem used        : 1.02G (pg-node075)
+Max Disk Write      : 71.68K (pg-node075)
+Max Disk Read       : 1.35M (pg-node075)
 
 
 Acknowledgements:
