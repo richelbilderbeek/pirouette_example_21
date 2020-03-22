@@ -8,38 +8,37 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)         
 A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples)
 that shows the true and twin error for 10, 1k, 2k, ..., 10k nucleotides.
 
-
 ## Results
 
 100 nucleotides:
 
-![](example_21_314/errors.png)
+![](errors_100.png)
 
 248 nucleotides:
 
-![](example_21_315/errors.png)
+![](errors_248.png)
 
 500 nucleotides:
 
-![](example_21_316/errors.png)
+![](errors_500.png)
 
 1000 nucleotides:
 
-![](example_21_317/errors.png)
+![](errors_1000.png)
 
 2000 nucleotides:
 
-![](example_21_318/errors.png)
+![](errors_2000.png)
 
 4000 nucleotides:
 
-![](example_21_319/errors.png)
+![](errors_4000.png)
 
 8000 nucleotides:
 
-![](example_21_320/errors.png)
+![](errors_8000.png)
 
 16000 nucleotides:
 
-![](example_21_321/errors.png)
+![](errors_16000.png)
 
