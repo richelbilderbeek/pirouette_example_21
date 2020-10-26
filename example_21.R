@@ -18,7 +18,7 @@ sequence_lengths <- c(100, 248, 500, 1000, 2000, 4000, 8000, 16000)
 n_phylogenies_per_sequence_length <- 5
 is_testing <- is_on_ci()
 if (is_testing) {
-  sequence_lengths <- c(100, 248)
+  sequence_lengths <- c(40, 80)
   n_phylogenies_per_sequence_length <- 3
 }
 n_sequence_lengths <- length(sequence_lengths)
