@@ -66,8 +66,7 @@ pir_outs <- pir_runs(
 # Save summary
 n_replicates <- n_phylogenies_per_sequence_length
 pir_plots(pir_outs) +
-  ggtitle(paste("Number of replicates: ", n_replicates)) +
-  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+  ggtitle(paste("Number of replicates: ", n_replicates)); ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
 
 # Save individual runs
 for (i in seq_along(sequence_lengths)) {
@@ -76,8 +75,7 @@ for (i in seq_along(sequence_lengths)) {
   to_index <- ((i - 1) * n_replicates) + n_replicates
   pir_plots(
     pir_outs = pir_outs[from_index:to_index]
-  ) + ggtitle(paste("Sequence length:", sequence_length)) +
-    ggsave(
+  ) + ggtitle(paste("Sequence length:", sequence_length)); ggsave(
       filename = paste0("errors_", sequence_length, ".png"),
       width = 7,
       height = 7
